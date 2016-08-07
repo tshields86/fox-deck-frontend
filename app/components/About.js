@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router';
+import { Button } from 'react-bootstrap';
 
 
 class About extends Component {
@@ -7,7 +8,9 @@ class About extends Component {
     return (
       <div className="about">
         <h2>About Page</h2>
-        <p><Link to={'/'}>Home</Link></p>
+        <Link to="/">
+          <Button bsStyle="default" bsSize="small">Home</Button>
+        </Link>
       </div>
     );
   }
