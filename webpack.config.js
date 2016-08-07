@@ -23,8 +23,21 @@ module.exports = {
       {
       test: /\.js$/,
       loaders: ['babel-loader'],
-      include: path.join(__dirname, 'app')
-      }
+      include: path.join(__dirname, 'app'),
+      exclude: /(node_modules|bower_components)/
+    },
+    {
+      test: /\.css$/,
+      loaders: ['style', 'css'],
+    },
+    {
+      test: /\.scss$/,
+      loaders: ['style', 'css', 'sass'],
+    },
+    {
+      test: /\.(woff|woff2|ttf|svg|eot)/,
+      loader: 'url?limit=100000',
+    }
     ]
   },
   resolve: {
@@ -36,6 +49,11 @@ module.exports = {
       About: 'app/components/About.js',
       applicationStyles: 'app/styles/app.scss'
     },
-    extensions: ['', '.js', '.jsx']
+    extensions: ['', '.js', '.jsx', '.json', '.scss']
+  },
+  sassLoader: {
+    includePaths: [
+      path.resolve(__dirname, './bower_components/bootstrap-sass/assets/stylesheets')
+    ]
   }
 };

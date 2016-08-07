@@ -3,7 +3,8 @@ import ReactDOM from 'react-dom';
 import routes from './config/routes';
 
 // App Styles
-require('style!css!sass!applicationStyles')
+// import 'style!css!sass!applicationStyles'
+import 'applicationStyles';
 
 ReactDOM.render(
   routes,

@@ -1,0 +1,17 @@
+{
+  "name": "fox-deck-frontend",
+  "description": "Frontend for Fox Deck",
+  "main": "index.js",
+  "authors": [
+    "Travis Shields <travis.shields@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/tshields86/fox-deck-frontend",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
